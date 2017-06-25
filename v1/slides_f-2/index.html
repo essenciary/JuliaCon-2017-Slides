@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Full stack web dev with Genie.jl: Slides</title>
+		<meta name="description" content="Slides">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-white-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section class="stack" data-id="0c397c9943609dd8458e7432a3f09783"><section data-id="fe41fee4414011eae3c9e1394aa1eef7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 58px; height: auto;" data-block-id="b334085edd792175ed2b4dba65a23888"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" data-gramm_id="222b7689-55c4-9e29-afd9-fce577d1d588" data-gramm="true" data-gramm_editor="true" style="z-index: 11;" dir="ui"><h1>Full Stack Web Development with Julia and Genie</h1></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 395px;" data-block-id="e50e96c5d804b12d93801c8b9e97f738"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 180%;" data-gramm_id="374bd4ac-d1fd-18dd-c325-3771833c0819" data-gramm="true" data-gramm_editor="true">
+<p>JuliaCon 2017</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 570px;" data-block-id="769465baae777da8a84c76aaaa4d82d0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Adrian Salceanu</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 620px;" data-block-id="b801b7733fce0423b51558e7aabf37e8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 70%;" data-gramm_id="374bd4ac-d1fd-18dd-c325-3771833c0819" data-gramm="true" data-gramm_editor="true">
+<p>June 23rd 2017</p>
+</div></div></section><section data-id="478bf4415547b523876ac4a531ed19cc">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 81px; top: 49px;" data-block-id="abb3bd5b64c2d8e376dd4948dfb44eb0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 140%; text-align: left;" data-gramm_id="2f644eb9-a8cb-87cd-e1c0-41a561cd8d50" data-gramm="true" data-gramm_editor="true">
+<p>Web developer for 15 years</p>
+
+<p> </p>
+
+<p>Developing real-time, data-intensive web products since 2008</p>
+
+<p> </p>
+
+<p>CTO at OLBG, one of the biggest sportsbook affiliate in the UK (loooots of real-time, sports betting-related data!)</p>
+
+<p> </p>
+
+<p>Creator of Genie.jl</p>
+</div></div></section></section><section data-id="be2f87e763eca1000703326e208c8f84"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 391px; height: 350px; left: 285px; top: 20px;" data-block-id="518587d4f12b545d607c889bf479bfb6"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="500" data-natural-height="448" data-lazy-loaded="" data-src="f-2/063b197c6aeb14a3baf2b18448a29c3a.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 343px; height: 261px; left: 337px; top: 320px;" data-block-id="4d738e2949a1dfb6e3dd4846ebd26d52"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 615px;" data-block-id="d11955517824b09b2712ff0e26ec33b6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);" data-gramm_id="f95b0414-44b8-30ab-95bf-0fdcf6bd1ad2" data-gramm="true" data-gramm_editor="true">
+<h3>genieframework.com</h3>
+</div></div></section><section data-id="f1759559270f3ad912e85d810595f6e3"><div class="sl-block" data-block-type="text" style="width: 831px; left: 72px; top: 98px; height: auto;" data-block-id="089cb18efadc18ae710d4c8d82bfeae8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; text-align: left; line-height: 1.69;" data-gramm_id="c79c611d-69e4-de3d-c335-ddbbdb34b9ef" data-gramm="true" data-gramm_editor="true" data-has-line-height="" dir="ui">
+<h1>
+<span style="color:#008080">Genie</span> is a server-side web application framework, written in Julia.</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="ee1787150dec6b149f9ea9f68b029760"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section class="stack" data-id="b5c8c628048c48049675d278deec99ae"><section data-id="fd453b63bc3b234325b49705f0039570"><div class="sl-block" data-block-type="text" style="width: 831px; left: 85px; top: 68px; height: auto;" data-block-id="a1a002da4eed7a60bb83b9ed73547f73"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; text-align: left;" data-gramm_id="c79c611d-69e4-de3d-c335-ddbbdb34b9ef" data-gramm="true" data-gramm_editor="true" dir="ui">
+<h2>
+<span style="color:#008080">Model-View-Controller</span><span style="color:#000000"> architecture</span>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 831px; left: 85px; top: 278px; height: auto;" data-block-id="e5929faa2bcdbff1c77952d7eb646935"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; text-align: left;" data-gramm_id="c79c611d-69e4-de3d-c335-ddbbdb34b9ef" data-gramm="true" data-gramm_editor="true" dir="ui">
+<h2>
+<span style="color:#008080">MIT</span><span style="color:#000000"> Licensed</span>
+</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 831px; left: 85px; top: 417px; height: auto;" data-block-id="c64df8e1baf284a2aec8e114ce3aa818"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; text-align: left;" data-gramm_id="c79c611d-69e4-de3d-c335-ddbbdb34b9ef" data-gramm="true" data-gramm_editor="true" dir="ui">
+<h2>"Like <span style="color:#008080">Django</span> and <span style="color:#008080">Rails</span>, but without the fails..."</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="41eb897fe7e710c3a1fdc21d9fd438f9"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="ea81e219c7357510b1b838dcd6df78eb"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 738px; height: 610px; left: 111px; top: 45px;" data-block-id="8893a1b0d9fa9c9cf277be1a638d8627"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="679" data-natural-height="561" data-lazy-loaded="" data-src="f-2/775c2f043b3781f1599fba1e16fe9087.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 700px; height: 700px; left: 130px; top: 0px;" data-block-id="c7149ed97f009a6879753685d7ae26f9"><div class="sl-block-content" style="z-index: 12; transition-duration: 0.6s; transition-delay: 3s;" data-animation-type="fade-in"><img data-natural-width="600" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ae7b6cd36d477fb0d59c9706d3f4256e.png"></div></div></section></section><section class="stack" data-id="76f45ce00d3316eb5c3a0c1d35db00d0"><section data-id="1db74bc7dbbdc69ed1035b88e320f0e2"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 635px; left: 0px; top: 33px;" data-block-id="a8053aea4d4bf0181b794101c9dfce3a"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1245" data-natural-height="823" data-lazy-loaded="" data-src="f-2/556b85e7239168ec35bd81c3548996e7.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 331px;" data-block-id="e463634d9999ecb66ffd16bc0a8a3bf8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; background-color: rgb(255, 255, 255); border-style: solid; border-width: 4px;">
+<h1>Demo</h1>
+</div></div></section><section data-id="9245dc4b39692d67fe35345fa083d83b"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;" data-block-id="537c56ad4fa605e24046ddfc70874a5e"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="9fd1b3b2-54b8-96d1-bac3-ab4fcd53c9ab" data-gramm="true" data-gramm_editor="true">
+<h2>Demo requirements</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 139px; height: auto;" data-block-id="b4d7227a2cb2e1d8e2962c93a6bad637"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 150%; line-height: 1.56;" data-has-line-height="" data-gramm_id="3f8bb50f-77d8-1935-4e2c-79b0a8eec370" data-gramm="true" data-gramm_editor="true">
+<ol>
+	<li>user searches for a Twitter #hash</li>
+	<li>app performs a #hash search against the Twitter API</li>
+	<li>app performs sentiment analysis on the tweets using the Aylien API (polarity, subjectivity)</li>
+</ol>
+</div></div></section><section data-id="10ea2e07bd26497629e6d319e8e944a9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 33px; height: auto;" data-block-id="0446991746ccdaea87f67bad2520bd91">
+    <div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="9fd1b3b2-54b8-96d1-bac3-ab4fcd53c9ab" data-gramm="true" data-gramm_editor="true">
+        <h2>Demo requirements</h2>
+    </div>
+</div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 139px; height: auto;" data-block-id="5c88d7d350ac383979986ffdfceaf468">
+    <div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 150%; line-height: 1.56;" data-has-line-height="" data-gramm_id="3f8bb50f-77d8-1935-4e2c-79b0a8eec370" data-gramm="true" data-gramm_editor="true">
+        <ol start="4">
+            <li>app computes some stats and displays some charts (retweets, favorites, polarity, subjectivity)</li>
+            <li>keeps updating in real time, as new tweets are created. </li>
+        </ol>
+    </div>
+</div></section><section data-id="82cb238735f9927decb1a137e676e2ea"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 960px; height: 348px; left: 0px; top: 86px;" data-block-id="b6afcd616dfe4963b0428798ab5f1aea"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="1320" data-natural-height="478" data-lazy-loaded="" data-src="f-2/0f15c0159d01094b5c72e28a7edc570b.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 686px; left: 69px; top: 506px;" data-block-id="853eff7000c4166a2f9624fdc77025ab"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; color: rgb(230, 95, 137);" data-gramm_id="2c95bca2-5e28-f11b-d93c-5040571f63da" data-gramm="true" data-gramm_editor="true">
+<pre>1. Synchronous request/response cycle</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 731px; left: 69px; top: 546px;" data-block-id="c5a73a54980605412354d3a3d3993901"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: left; color: rgb(0, 255, 255);" data-gramm_id="2c95bca2-5e28-f11b-d93c-5040571f63da" data-gramm="true" data-gramm_editor="true">
+<pre>2. WebSockets request/response cycle</pre>
+</div></div></section><section data-id="aaad4312e86a400bc5297c34ebe6481f"><div class="sl-block" data-block-type="video" style="min-width: 30px; min-height: 30px; width: 960px; height: 634px; left: 0px; top: 33px;" data-block-id="7d3c5db313729f057acd7fdc56485b04"><div class="sl-block-content" style="z-index: 11;" data-media-id="3919974" data-video-thumb="https://s3.amazonaws.com/media-p.slid.es/videos/722184/LCyUBuAn/tweet-stats-2-01_thumb_00001.jpg"><video playsinline="" poster="https://s3.amazonaws.com/media-p.slid.es/videos/722184/LCyUBuAn/tweet-stats-2-01_thumb_00001.jpg" data-lazy-loaded="" controls="controls" muted="" data-paused-by-reveal="" data-src="f-2/c90635b07720821f76c5eaa9908bb483.mp4"></video></div></div></section></section><section class="stack" data-id="36a2eafc439951a7b64a986bd9d50b74"><section data-id="929cb4496434838ae96e3c05938dbae3"><div class="sl-block" data-block-type="text" style="width: 806px; left: 64px; top: 196px; height: auto;" data-block-id="60c72368cb095029aba27645694cec01"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; text-align: center; font-size: 150%;">
+<h1>100%          </h1>
+
+<h1>  backend </h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 308px; height: 208px; left: 492px; top: 154px;" data-block-id="137af7ea224622f9c01c731da205c88d"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1280" data-natural-height="865" data-lazy-loaded="" data-src="f-2/71716e91bf98cc265fba6771a2f56494.png"></div></div></section><section data-id="273f1ad684dc0116b63f1ba20ba1210b">
+<div class="sl-block" data-block-type="text" style="width: 685px; left: 125px; top: 126px; height: auto;" data-block-id="329c2dbe3012023c329ba0a282e68eb1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; text-align: left;" data-gramm_id="4b841ef2-b942-b4a1-fc7c-f72d3433f6ee" data-gramm="true" data-gramm_editor="true">
+<h1>200 lines of </h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 475px; left: 166px; top: 305px; height: auto;" data-block-id="3b5b6fa23e66669dc079e58ef1560ee4"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 12; text-align: left;" data-gramm_id="4b841ef2-b942-b4a1-fc7c-f72d3433f6ee" data-gramm="true" data-gramm_editor="true">
+<h1>150 lines of </h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 470px; left: 155px; top: 488px; height: auto;" data-block-id="67eca9727bf2cf72a858a7db26d61e0d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 13; text-align: left;" data-gramm_id="4b841ef2-b942-b4a1-fc7c-f72d3433f6ee" data-gramm="true" data-gramm_editor="true">
+<h1>100 lines of </h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 162px; left: 582px; top: 80px;" data-block-id="d6f35333675e3747f9199bfa65853802"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="1280" data-natural-height="865" data-lazy-loaded="" data-src="f-2/71716e91bf98cc265fba6771a2f56494.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 150px; height: 150px; left: 620px; top: 276px;" data-block-id="eb9d6880bba1572ad21de81f6723ca4c"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="512" data-natural-height="512" data-lazy-loaded="" data-src="f-2/25624b20c6da8ac72b0870e01661fe0a.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 122px; height: 122px; left: 638px; top: 476px;" data-block-id="f595eab958987a479f10a89cb3f0d297"><div class="sl-block-content" style="z-index: 16;"><img data-natural-width="1350" data-natural-height="1350" data-lazy-loaded="" data-src="f-2/4638c8ed8c44a64018834d0f58fe7f48.png"></div></div></section><section data-id="d0680b9471d439d46ae08f058546ce9a"><div class="sl-block" data-block-type="text" style="width: 805px; left: 75px; top: 91px; height: auto;" data-block-id="df655c53198d337f34cdcca36d17c682"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; text-align: center; font-size: 150%; line-height: 1.04;" data-gramm_id="4b841ef2-b942-b4a1-fc7c-f72d3433f6ee" data-gramm="true" data-gramm_editor="true" data-has-line-height="">
+<h1>Less than</h1>
+
+<h1><span style="font-size:2.0em">2</span></h1>
+
+<h1>hours</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="10d7bf0cc771639c6798316d99ceb8aa"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section></section><section class="stack" data-id="f23ee29f32dee0c016b4fb6478e97bd0"><section data-id="1a6853f390c79754d0c1ce1c57077907"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 933px; height: 700px; left: 13px; top: 0px;" data-block-id="8bd193b125fdeb62f659205d52b4e747"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="960" data-natural-height="720" data-lazy-loaded="" data-src="f-2/a57c847338caf5fa0ac873527e3cde14.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="cdbf328e91798b0721bddfb088cd918f"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="b4b59d5b00b6f1a9babc45d30120d841"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 933px; height: 700px; left: 13px; top: 0px;" data-block-id="4ff0f79cd5a932a6b4134a960cd6cf7b"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="960" data-natural-height="720" data-lazy-loaded="" data-src="f-2/e2a5262778ac027ac106c691bae8fb8b.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="75d0a823af54dd09ca1544600ea94b2f"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section></section><section class="stack" data-id="c333abb7d15fc7e360ba4f2f44e9fd05"><section data-id="7d2e7cd4de533782c28022dec92252b8"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 24px; height: auto;" data-block-id="d2ebba4bb12ad249c556a51a9b7623b2"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Web Resources</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 211px;" data-block-id="664273a57a114c3a17e444311baf50d3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%; text-align: left;">
+<p>Representational State Transfer (REST) approach</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 426px;" data-block-id="6ac71e2c72bd4932c8e8c254f161400a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 150%; text-align: left;" data-gramm_id="dc4dc2d1-7423-d57c-b72f-2c42b491c55b" data-gramm="true" data-gramm_editor="true">
+<p>Genie apps provide access to textual (HTML, JSON, <span style="color:#A9A9A9">XML</span>) representations of web resources</p>
+</div></div></section><section data-id="f31e0066b05425293bb7b526e97b7e38"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 297px; height: 700px; left: 161px; top: 0px;" data-block-id="1ab2e79f183212d0bdac942ac98dc189"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="321" data-natural-height="757" data-lazy-loaded="" data-src="f-2/53461b2f4548e6bffaf366cec77a9f35.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 450px; left: 480px; top: 365px;" data-block-id="69e107d91d8e301b11a942179b7fddce"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p>File structure of "searches" and "tweets" resources</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="52caa30e7e7cb60f64496f0fd0a76e3c"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 240px; height: 328px; left: 205px; top: 173px;" data-block-id="b35f95814235ee9edb28e256bfee854a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 240 328"><defs><clippath id="shape-mask-1-1498227741665"><rect width="240" height="328"></rect></clippath></defs><rect width="240" height="328" clip-path="url(#shape-mask-1-1498227741665)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div></section></section><section data-id="2b4cc333582754322e587b09a0ad0dfa"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21px; height: auto;" data-block-id="c0a2cca6f8f12340665c8103270b0fb0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="38a1abde-b784-e4a7-0700-3d6411b5254b" data-gramm="true" data-gramm_editor="true">
+<h1>Controller</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="819e99e98481e33757cbc760606e480b"><div class="sl-block-content" style="z-index: 11; font-size: 130%;" data-highlight-theme="obsidian"><pre class="ruby"><code>module TweetsController
+
+using App, SearchLight
+@dependencies
+
+function index()
+  search_term = haskey(@params, :q) ? lowercase(@params(:q)) : ""
+
+  recent_searches = SearchLight.find(Search, 
+                                     SQLQuery(order = "id DESC", 
+                                              limit = 10))
+
+  # ... more code here ... 
+
+  respond_with_html(:tweets, :index, 
+                    search_term = search_term, 
+                    recent_searches = recent_searches)
+end
+
+end
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 338px; left: 613px; top: 151px;" data-block-id="18e40d688e48ee96771fb7a73e203b19"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: justify; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:right"><span style="font-size:1.0em">app/resources/tweets/controller.jl</span></pre>
+</div></div></section><section data-id="0dd59c37ce401f28a1d12dba55638a1c"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 477px; height: 240px; left: 243px; top: 40px;" data-block-id="efc1cf3dc4b2b2fdf50f485da6a921d3"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="794" data-natural-height="399" data-lazy-loaded="" data-src="f-2/a49d0b2f5f084c5e147bde34cd918631.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 726px; left: 120px; top: 355px;" data-block-id="a15afe138f8bf094590145f9d852aa8d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 120%;" data-gramm_id="6e130102-db24-03b5-26ba-bb72d32c6a79" data-gramm="true" data-gramm_editor="true">
+<h3>Model layer</h3>
+
+<h3>ORM design pattern</h3>
+
+<h3>DB query interface</h3>
+
+<h3>Convention over configuration</h3>
+</div></div></section><section data-id="ff02ab1a0031e0682517a075dafb7800"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="908d9641ae97193074dbb932656b9015"><div class="sl-block-content" style="z-index: 11; font-size: 150%;" data-highlight-theme="obsidian"><pre class="python"><code>export Search, Searches
+
+type Search &lt;: AbstractModel
+  ### internals
+  _table_name::String
+  _id::String
+
+  ### fields
+  id::Nullable{SearchLight.DbId}
+  search::String
+
+  ### constructor
+  Search(;
+    id = Nullable{SearchLight.DbId}(),
+    search = ""
+  ) = new("searches", "id", id, search)
+end
+
+module Searches
+end</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 311px; left: 640px; top: 11px;" data-block-id="8972f60a1b1557d8447dcf3c9d298662"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:right">app/resources/searches/model.jl</pre>
+</div></div></section><section data-id="f988d2aa6aa251084ee8d0931b2ea7cf"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="29d8d755d6896cde83a0a3f0a78f65f3"><div class="sl-block-content" style="z-index: 10; font-size: 110%;" data-highlight-theme="obsidian"><pre class="ruby"><code>module TweetsController
+
+using App, SearchLight
+@dependencies
+
+function index()
+  search_term = haskey(@params, :q) ? lowercase(@params(:q)) : ""
+
+  recent_searches = SearchLight.find(Search, 
+                                     SQLQuery(order = "id DESC", limit = 10))
+
+  # ... more code ...
+
+  tweets = SearchLight.find(Tweet, 
+                            SQLQuery(where = ["polarity != -100", 
+                                              SQLWhereExpression("text ILIKE ?", 
+                                                                 "%#$(search_term)%")], 
+                                     limit = 20, 
+                                     order = "id DESC"))
+    
+  search = Search(search = search_term)
+
+  SearchLight.create_or_update_by!!(search, :search)
+    
+  # ... more code ...
+
+end
+
+end
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 311px; left: 640px; top: 11px;" data-block-id="9ba1f32533d202f31cbc7c37793b3b5d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:right">app/resources/tweets/controller.jl</pre>
+</div></div>
+
+
+</section><section data-id="e8621efa129722c0717521f8a3c8154c"><div class="sl-block" data-block-type="code" style="width: 960px; height: 694px; left: 0px; top: 0px;" data-block-id="42d1d7e937e8824d623e66e8142c4ffc"><div class="sl-block-content" style="z-index: 10; font-size: 130%;" data-highlight-theme="obsidian"><pre class="ruby"><code>sql = "
+    SELECT
+      COUNT(*) AS results_count
+    FROM
+      (
+      SELECT
+        to_tsvector('english', readme) AS repo_info
+      FROM
+        repos
+      ) repos_search,
+      to_tsquery('$search_term') query
+    WHERE
+      repos_search.repo_info @@ query
+  "
+  SearchLight.query(sql)[1, :results_count] 
+
+
+SearchLight.query_raw("
+    SELECT
+      SUM((polarity = -1)::int) AS negative,
+      SUM((polarity = 0)::int) AS neutral,
+      SUM((polarity = 1)::int) AS positive,
+      SUM((subjective = TRUE)::int) AS subjective,
+      SUM((subjective = FALSE)::int) AS objective
+    FROM tweets
+    WHERE $(filters[1]) $(filters[2] |&gt; string )") |&gt; first </code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 274px; left: 677px; top: 11px;" data-block-id="4e36ccef079940a9445b02a98aaeadc8"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">app/resources/tweets/model.jl</pre>
+</div></div>
+
+</section><section data-id="34e0f643166d947a072c877301a696ff"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="998fba1039020bcd6720c8ccfb673bee"><div class="sl-block-content" style="z-index: 10; font-size: 160%;" data-highlight-theme="obsidian"><pre class="ruby"><code>
+
+
+export DbId, SQLType, AbstractModel, ModelValidator
+
+export SQLInput, SQLColumn, SQLColumns, SQLLogicOperator
+
+export SQLWhere, SQLWhereExpression, SQLWhereEntity
+
+export SQLLimit, SQLOrder, SQLQuery, SQLRaw
+
+export SQLRelation, SQLRelationData
+
+export SQLJoin, SQLOn, SQLJoinType, SQLHaving, SQLScope</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 276px; left: 675px; top: 8px;" data-block-id="fa3cb124e261c46400519ebbe884cbaa"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:right">SearchLight/src/model_types.jl</pre>
+</div></div></section><section data-id="ad307c9ed280035393e23c9dfe5c3676"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="54ed3c03e37865d7a710d76576c9a551"><div class="sl-block-content" style="z-index: 10; font-size: 160%;" data-highlight-theme="obsidian"><pre class="ruby"><code># Data retrieval 
+find(), find_df(), find_by()
+find_one_by(), find_one_by!!(), find_one(), find_one!!()
+rand(), rand_one(), rand_one!!(), all()
+
+# Data persistance
+save(), save!(), save!!()
+update_with!(), update_with!!()
+create_with()
+update_by_or_create!!()
+find_one_by_or_create()
+
+# Data removal
+delete(), delete_all()
+
+# Low-level query
+query(), query_raw()
+
+# Data aggregation
+count()</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 276px; left: 675px; top: 8px;" data-block-id="e6237fd68b3135ef1baa93c36868a86d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">SearchLight/src/SearchLight.jl</pre>
+</div></div></section><section data-id="3f6f9d881eb033ae333a86b2ad39bc41"><div class="sl-block" data-block-type="text" style="width: 852px; left: 54px; top: 23px; height: auto;" data-block-id="7d8bcd845c8b8df10c94268be7bdbde3"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="38a1abde-b784-e4a7-0700-3d6411b5254b" data-gramm="true" data-gramm_editor="true">
+<h1>There's more</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 160px;" data-block-id="45e8661816db14acaefa15b86d1ee0fc"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%; line-height: 1.56;" data-has-line-height="">
+<h3>Relations</h3>
+
+<h3>Validators</h3>
+
+<h3>Callbacks</h3>
+
+<h3>Scoping</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="676686f0c0b1256ab1228d58e61efca8"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="54dac8b1117cf1df831ea8f77b5aa06b"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="02ded3e00207a8ebaceff0c2c5aee631"><div class="sl-block-content" style="z-index: 10; font-size: 120%;" data-highlight-theme="obsidian"><pre class="python"><code>using Channels
+
+type Tweet &lt;: AbstractModel
+  ### internals
+  _table_name::String
+  _id::String
+
+  ### fields
+  id::Nullable{SearchLight.DbId}
+  tweet_id::String
+  text::String
+
+  search_hash::String
+
+  ### callbacks
+  after_save::Function
+
+  ### constructor
+  Tweet(;
+    id = Nullable{SearchLight.DbId}(),
+    tweet_id = "",
+    text = "",
+    search_hash = "",
+
+    after_save = (m::Tweet) -&gt; Channels.broadcast(["tweets-" * m.search_hash], 
+                                                  "tweet", 
+                                                  SearchLight.to_dict(m))
+
+  ) = new("tweets", "id", id, tweet_id, text, search_hash, after_save)
+end</code></pre></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 931px; height: 99px; left: 14px; top: 542px;" data-block-id="d90824a056ad67e2f9c1a30e9d86d869"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 931 99"><defs><clippath id="shape-mask-7-1498227774553"><rect width="931" height="99"></rect></clippath></defs><rect width="931" height="99" clip-path="url(#shape-mask-7-1498227774553)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 276px; left: 675px; top: 8px;" data-block-id="631e65bc3b6ca98c43f5ff28a12f6edf"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align:right">app/resources/tweets/model.jl</pre>
+</div></div></section><section data-id="e3d2dd05305dd3df3dd71a85e085dbd9"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 22px; height: auto;" data-block-id="624e8da0e1d954be892749da145e0b0e"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="38a1abde-b784-e4a7-0700-3d6411b5254b" data-gramm="true" data-gramm_editor="true">
+<h1>Database backends</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 536px; height: 246px; left: 40px; top: 184px;" data-block-id="d9d3c303b2e65bdf91253bf4cd1c92e6"><div class="sl-block-content" style="z-index: 11; border-style: solid; border-width: 10px; border-color: rgb(106, 168, 79); border-radius: 20px;"><img data-natural-width="610" data-natural-height="280" data-lazy-loaded="" data-src="f-2/fa626d553c2a0fded82ebadf5de7516d.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 311px; height: 210px; left: 616px; top: 295px;" data-block-id="6929c379bef76b748a46cde438427b7c"><div class="sl-block-content" style="z-index: 12; border-style: solid; border-width: 10px; border-color: rgb(217, 234, 211); border-radius: 10px;"><img data-natural-width="176" data-natural-height="119" data-lazy-loaded="" data-src="f-2/5cb9a2db6bbbe958461de1f601261060.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 322px; height: 153px; left: 269px; top: 484px;" data-block-id="b65ac7e520b1df48c42b91d07175e1c7"><div class="sl-block-content" style="z-index: 14; border-style: solid; border-width: 10px; border-radius: 10px; border-color: rgb(170, 170, 170);"><img data-natural-width="500" data-natural-height="237" data-lazy-loaded="" data-src="f-2/b80e3eb3377157f2f5fc7f31f5dfc673.png"></div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="84d690f1831e17cc4295431342c33745"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="74bbddfabf551808652e671cf6e09618"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 480px; height: 241px; left: 240px; top: 39px;" data-block-id="04a9cca0dc6341c81a4410b8a85e2685"><div class="sl-block-content" style="z-index: 10;"><img data-natural-width="794" data-natural-height="399" data-lazy-loaded="" data-src="f-2/36b20d23e944c9c82a9073574d72e01c.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 803px; left: 80px; top: 326px;" data-block-id="f673868e966a03b765b97c9d77e245fb"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 120%; text-align: left;">
+<h3><span>HTML-based view templates</span></h3>
+
+<h3>Uses embedded Julia</h3>
+
+<h3>HTML to Julia transpiler</h3>
+
+<h3>Compiled views</h3>
+
+<h3>Fast!</h3>
+</div></div></section><section data-id="d5b46be06dc98463ddbd4d8080a8332b"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="34e9acc9fe2d6f38ab07bc6b71cf5805"><div class="sl-block-content" style="z-index: 10; font-size: 110%;" data-highlight-theme="obsidian"><pre class="none"><code>&lt;!-- list of tweets --&gt;
+&lt;div class="row"&gt;
+  &lt;ul class="list-group" id="tweets_list" style="height: 600px; overflow: scroll;"&gt;
+
+    &lt;%
+      foreachvar(:tweet, @vars(:tweets)) do (_)
+        include_template("app/resources/tweets/views/partials/tweet.flax.html")
+      end
+    %&gt;
+
+    &lt;li&gt;
+      &lt;h4&gt;
+        &lt;center&gt;
+          Waiting for tweets...
+        &lt;/center&gt;
+      &lt;/h4&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;!-- end list of tweets --&gt;</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 402px; left: 549px; top: 11px;" data-block-id="7341ee3b0e85ed9f18ab72139fc16d63"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">app/resources/tweets/views/index.flax.html</pre>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 855px; height: 133px; left: 25px; top: 75px;" data-block-id="bfdadcb9eee8c7bf6d3d7709c70bba0f"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 855 133"><defs><clippath id="shape-mask-8-1498226761263"><rect width="855" height="133"></rect></clippath></defs><rect width="855" height="133" clip-path="url(#shape-mask-8-1498226761263)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div></section><section data-id="24b5a1ce38549a630bdb99b913061054"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="49087be32f2b65a9fcd2640fe404e883"><div class="sl-block-content" style="z-index: 10; font-size: 110%;" data-highlight-theme="obsidian"><pre class="none"><code>
+
+&lt;li class="list-group-item" id="tweet_$( @vars(:tweet).id |&gt; Base.get )"&gt;
+
+  &lt;div class="row"&gt;
+    
+    &lt;div class="col-sm-1 col-xs-2"&gt;
+      &lt;img src="&lt;$ @vars(:tweet).avatar_url $&gt;" alt="user" class="img-circle" /&gt;
+    &lt;/div&gt;
+
+    &lt;div&gt;
+      &lt;% @vars(:tweet).user_name %&gt; @&lt;% @vars(:tweet).screen_name %&gt; 
+      &lt;% @vars(:tweet).text %&gt; 
+      &lt;% sentiment_labels(@vars(:tweet).polarity) %&gt; 
+      &lt;% subjectivity_labels(@vars(:tweet).subjective) %&gt; 
+
+      &lt;span class="glyphicon glyphicon-retweet label label-default retweet-count"&gt;
+        &lt;span class="item-count"&gt;
+          &lt;% @vars(:tweet).retweet_count %&gt;
+        &lt;/span&gt;
+      &lt;/span&gt; 
+
+      &lt;span class="glyphicon glyphicon-heart label label-default favorite-count"&gt;
+        &lt;span class="item-count"&gt;
+          &lt;% @vars(:tweet).favorite_count %&gt;
+        &lt;/span&gt;
+      &lt;/span&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/li&gt;
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 486px; left: 465px; top: 7px;" data-block-id="a7ab2ea6299a540e17c55382d5121453"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">app/resources/tweets/views/partials/tweet.flax.html</pre>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 508px; height: 51px; left: 303px; top: 32px;" data-block-id="8390e0cd5b647419d2ae6c80c2a51d51"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 508 51"><defs><clippath id="shape-mask-3-1498226760105"><rect width="508" height="51"></rect></clippath></defs><rect width="508" height="51" clip-path="url(#shape-mask-3-1498226760105)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 466px; height: 29px; left: 55px; top: 150px;" data-block-id="19fdb51a95ff1bbb664af0364757c4da"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 13;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 466 29"><defs><clippath id="shape-mask-4-1498226760108"><rect width="466" height="29"></rect></clippath></defs><rect width="466" height="29" clip-path="url(#shape-mask-4-1498226760108)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 711px; height: 99px; left: 54px; top: 233px;" data-block-id="060a407e534822d772ec2dbcfc0a6232"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 711 99"><defs><clippath id="shape-mask-5-1498226760110"><rect width="711" height="99"></rect></clippath></defs><rect width="711" height="99" clip-path="url(#shape-mask-5-1498226760110)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 379px; height: 30px; left: 101px; top: 382px;" data-block-id="0405eda113bf400046b45469beec5845"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 15;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 379 30"><defs><clippath id="shape-mask-6-1498226760112"><rect width="379" height="30"></rect></clippath></defs><rect width="379" height="30" clip-path="url(#shape-mask-6-1498226760112)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 386px; height: 30px; left: 106px; top: 505px;" data-block-id="b1fcf679339b7fa5819246d19f1d186c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 17;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 386 30"><defs><clippath id="shape-mask-7-1498226760114"><rect width="386" height="30"></rect></clippath></defs><rect width="386" height="30" clip-path="url(#shape-mask-7-1498226760114)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div></section><section class="stack" data-id="327f2d0cead76cac883899dc0fa3aa94"><section data-id="90a7bd022646201f437faa0c34999da6"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="69e2c882c0bd95a4bfcb10e5470eece7"><div class="sl-block-content" style="z-index: 10;" data-highlight-theme="obsidian"><pre class="ruby"><code>using Flax
+function func_2e03d893974211738ea4eebc1f4e63dba37d607a() 
+  Flax.skip_element()  do;[ 
+    Flax.li(Symbol("class") =&gt; "list-group-item", 
+            Symbol("id") =&gt; "tweet_$( @vars(:tweet).id |&gt; Base.get )" )  do;[ 
+      Flax.div(Symbol("class") =&gt; "row" )  do;[ 
+	Flax.div(Symbol("class") =&gt; "col-sm-1 col-xs-2" )  do;[ 
+	  Flax.img(Symbol("alt") =&gt; "user", 
+                   Symbol("class") =&gt; "img-circle", 
+                   Symbol("src") =&gt; "$(@vars(:tweet).avatar_url)" ) 
+ 	]end 
+	Flax.div()  do;[ 
+          @vars(:tweet).user_name  
+	  " @" 
+	  @vars(:tweet).screen_name  
+	  @vars(:tweet).text  
+	  sentiment_labels(@vars(:tweet).polarity)  
+	  subjectivity_labels(@vars(:tweet).subjective)  
+	  Flax.span(Symbol("aria-hidden") =&gt; "true", 
+                    Symbol("class") =&gt; "glyphicon glyphicon-retweet label label-default retweet-count" )  do;[ 
+
+            Flax.span(Symbol("class") =&gt; "item-count" )  do;[ 
+	      @vars(:tweet).retweet_count  
+ 	    ]end 
+
+ 	  ]end 
+	  Flax.span(Symbol("aria-hidden") =&gt; "true", 
+                    Symbol("class") =&gt; "glyphicon glyphicon-heart label label-default favorite-count" )  do;[ 
+            Flax.span(Symbol("class") =&gt; "item-count" )  do;[ 
+	      @vars(:tweet).favorite_count  
+            ]end 
+          ]end 
+ 	]end 
+      ]end 
+    ]end 
+  ]end 
+end</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 471px; left: 482px; top: 6px;" data-block-id="2ec58431cb32073967c4af83cb459d29"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">app/resources/tweets/views/partials/tweet.flax.html</pre>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 522px; height: 86px; left: 106px; top: 389px;" data-block-id="3e231aebc19a225a4f068aaedc3bd05b"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 12; transition-duration: 0.6s; transition-delay: 3s;" data-shape-stroke-color="#00ffff" data-shape-stroke-width="6" data-animation-type="fade-in"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 522 86"><defs><clippath id="shape-mask-1-1498226758548"><rect width="522" height="86"></rect></clippath></defs><rect width="522" height="86" clip-path="url(#shape-mask-1-1498226758548)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#00ffff" stroke-width="12"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 572px; height: 26px; left: 1px; top: 21px;" data-block-id="2d83238de89a1025633d3f63a75c6ba1"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgba(0, 0, 0, 0)" data-shape-stretch="true" style="z-index: 14;" data-shape-stroke-color="#9900ff" data-shape-stroke-width="6"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 572 26"><defs><clippath id="shape-mask-2-1498226758552"><rect width="572" height="26"></rect></clippath></defs><rect width="572" height="26" clip-path="url(#shape-mask-2-1498226758552)" class="shape-element" fill="rgba(0, 0, 0, 0)" stroke="#9900ff" stroke-width="12"></rect></svg></div></div></section><section data-id="d58f5f45fb56c22f5673170ab007ce1a"><div class="sl-block" data-block-type="code" style="width: 960px; height: 700px; left: 0px; top: 0px;" data-block-id="6f9e8cf28b8c2245029f18f5ad30d764"><div class="sl-block-content" style="z-index: 10; font-size: 160%;" data-highlight-theme="obsidian"><pre class="ruby"><code>
+
+
+Flax.span(Symbol("class") =&gt; "item-count")  do;[ 
+  @vars(:tweet).retweet_count  
+]end </code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 471px; left: 482px; top: 6px;" data-block-id="e1433c358a60b88dc389e8fda502d044"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">app/resources/tweets/views/partials/tweet.flax.html</pre>
+</div></div></section></section><section class="stack" data-id="a99b242543a1dad690a5891052d186d3"><section data-id="bb694c77eba1f3cb72fd6217e58abac4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 26px; height: auto;" data-block-id="198418603f7269ba0344be8ed6f23a3b"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Asset pipeline</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 188px; left: 77px; top: 212px;" data-block-id="bf15ea8e6a825df6350490755555aef9"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="2500" data-natural-height="1309" data-lazy-loaded="" data-src="f-2/32607dc053aaf91ae918d27ebd067500.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 491px; height: 191px; left: 440px; top: 200px;" data-block-id="66a027276639cc11b3894c5a5f37f22a"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="2500" data-natural-height="973" data-lazy-loaded="" data-src="f-2/9efbbf7fe8d1196b88d2a8d7c681a304.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 97px; left: 300px; top: 463px;" data-block-id="814adde71a1e8e7001a356c9ccdc50fe"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="2000" data-natural-height="538" data-lazy-loaded="" data-src="f-2/78470b9dd51c1d0481dd3aa15cbebc0e.png"></div></div></section><section data-id="4eca9eb97c5a53b2cebcfb2020b72db1"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 808px; left: 80px; top: 68px;" data-block-id="c7a57b57e3c96b55bfcc37a962f97980"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; font-size: 120%; line-height: 1.56; text-align: left;" data-has-line-height="">
+<h3>Library installation</h3>
+
+<h3>Dependency management</h3>
+
+<h3>Transpiling</h3>
+
+<h3>Concatenation</h3>
+
+<h3>Minification</h3>
+
+<h3>Fingerprinting (cache invalidation)</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="ef950503aed4fe6bc601414154294951"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="6394929029393a3f12c35ec0a903c940"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 164px; left: 77px; top: 16px;" data-block-id="8355cf63e44d17daac748bcee49b8b6c"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="2500" data-natural-height="1136" data-lazy-loaded="" data-src="f-2/191e7a63748e5f23213ab09355cdae8b.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 310px; height: 233px; left: 546px; top: 70px;" data-block-id="fb7d826b44f5b28c00f7ce65fd2b8128"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="638" data-natural-height="479" data-lazy-loaded="" data-src="f-2/34d862960abcab5f111fdf619b4cd59c.jpg"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 180px; left: 54px; top: 211px;" data-block-id="2f46176ff8c2b3a1fb1b49108be14ba4"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="400" data-natural-height="200" data-lazy-loaded="" data-src="f-2/c740cf623f08ac2be5b8a100ae85629d.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 270px; left: 521px; top: 360px;" data-block-id="73acbc9ef59a3e51570d99cc9aeec947"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="427" data-natural-height="320" data-lazy-loaded="" data-src="f-2/c098057509f3a9872bf13a0c2c62186f.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 230px; height: 230px; left: 131px; top: 445px;" data-block-id="67cc11ab5cbf04614da8b3caeb9ed28e"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="800" data-natural-height="800" data-lazy-loaded="" data-src="f-2/2c2e9b35889d87e970987dc16b31dc82.gif"></div></div></section></section><section data-id="f5f1fe7221dbb22f10fa478e73c1a87f"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 23px; height: auto;" data-block-id="1f8dbe2727e3e8e82e88be70907cbd01"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Router</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="57ea1e4bb303a554167158d5dd025afd"><div class="sl-block-content" style="z-index: 12; font-size: 110%;" data-highlight-theme="obsidian"><pre class="ruby"><code>using Router
+
+route("/", resource = "tweets", controller = "TweetsController", action = "index")
+
+route("/", "tweets#TweetsController.index")
+
+# more examples
+
+route("/hello") do 
+  "Hello World"
+end
+
+# "http://domain.com/packages/22" ==&gt; @params(:packages_id) = "22"
+route("/packages/:package_id", 
+      "packages#PackagesController.Website.show", 
+      named = :package)
+
+# "http://pkg3.com/packages/22" ==&gt; @params(:packages_id) = 22
+route("/packages/:package_id::Int", 
+      "packages#PackagesController.Website.show", 
+      named = :package)
+
+route(POST, "/admin/articles/create", 
+            "articles#AdminController.Website.article_create", 
+            named = :admin_article_create)</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 188px; left: 763px; top: 151px;" data-block-id="bf2bbc2612afdc8c1d9ca312aa8dc874"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: right; color: rgb(204, 204, 204); font-size: 50%;">
+<pre style="text-align:right">config/routes.jl</pre>
+</div></div></section><section data-id="f67a97ac682d95d09347f263b852f1da"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 20px; height: auto;" data-block-id="9afb78e4bfa23452d1e2865c3fad574c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Tasks/Jobs</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 147px;" data-block-id="859fc7f9041f47cb3467c87808c81791"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left; font-size: 150%; line-height: 1.43;" data-has-line-height="">
+<p>Background processes, potentially long-running, written in Julia, that execute in the context of the Genie app.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 497px;" data-block-id="f385d0617602cc330518dc9cb24c56b9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; font-size: 150%;" data-gramm_id="c584c3aa-d04d-e8d0-48fa-b2b4121b4f5a" data-gramm="true" data-gramm_editor="true">
+<p>Can be started from the command line and are not exposed through the web server.</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="39ca60f1a36d54cac922b0a9eb8e8553"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="6d80d3b0e11ee7b8e314d49b4aa4f8a6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 23px; height: auto;" data-block-id="f803e26881b7032210c3b3cbc4b08838"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="65fa0c76-2b8b-684d-5ccf-45d1793287f9" data-gramm="true" data-gramm_editor="true">
+<h1>Environments</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 443px; height: 560px; left: 0px; top: 140px;" data-block-id="1d71c2c44d4ec895519e7d22ee223fdd"><div class="sl-block-content" style="z-index: 11; font-size: 120%;" data-highlight-theme="obsidian"><pre class="ruby"><code>
+
+using Configuration
+const config =  
+  Settings(
+    output_length     = 100,
+    suppress_output   = false,
+    log_db            = true,
+    log_queries       = true,
+    log_requests      = true,
+    log_responses     = true,
+    log_router        = false,
+    log_formatted     = true,
+    log_level         = :debug,
+    log_cache         = true,
+    log_views         = true,
+    assets_path       = "/",
+    cache_duration    = 0,
+    flax_compile_templates = false,
+    websocket_server  = true,
+    session_auto_start     = false
+  )
+</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 495px; height: 560px; left: 465px; top: 140px;" data-block-id="ba933d02d3d69e76492b4eb3968bc710"><div class="sl-block-content" style="z-index: 12; font-size: 120%;" data-highlight-theme="obsidian"><pre class="ruby"><code>
+
+using Configuration
+const config =  
+  Settings(
+    output_length       = 0,
+    suppress_output     = false,
+    log_db              = false,
+    log_queries         = false,
+    log_requests        = false,
+    log_responses       = false,
+    log_router          = false,
+    log_formatted       = false,
+    log_cache           = false,
+    log_level           = "error",
+    log_verbosity       = 
+        LOG_LEVEL_VERBOSITY_MINIMAL,
+    assets_path         = "/",
+    cache_duration      = 1_000
+    flax_compile_templates = true,
+    websocket_server    = true,
+    session_auto_start  = false
+  )
+</code></pre></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 204px; left: 751px; top: 146px;" data-block-id="11bd08f8776bd3ba719d0f5a248fc31f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre>app/config/env/prod.jl</pre>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 196px; left: 240px; top: 146px;" data-block-id="991ccfd46cdb04cdef102942667ef320"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; text-align: right; color: rgb(204, 204, 204); font-size: 50%;" data-gramm_id="bfd9bfcf-a263-8e4d-9ec0-ec9f8f024c46" data-gramm="true" data-gramm_editor="true">
+<pre style="text-align: right;">app/config/env/dev.jl</pre>
+</div></div></section><section data-id="eaf2e2be037422495092c3cf3028f2a6"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 23px; height: auto;" data-block-id="0d150e354879a85b33dd6c3a7c44e335"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;" data-gramm_id="65fa0c76-2b8b-684d-5ccf-45d1793287f9" data-gramm="true" data-gramm_editor="true">
+<h1>Caching</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="0bc9d3138da5c91d3343da30504829dd"><div class="sl-block-content" style="z-index: 12; font-size: 150%;" data-highlight-theme="obsidian"><pre class="ruby"><code>with_cache(hotel_data[:name], 600, dir = "hotels") do
+  
+  # This code is not executed if the cache is valid
+  Requests.post(hotel_beds_uri, 
+                headers = hotel_beds_headers, 
+                json = hotel_beds_body) |&gt; Requests.json
+
+end</code></pre></div></div></section><section data-id="48f7ca5bd45d95164571e88ad44f20b2"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 24px; height: auto;" data-block-id="2d608fc91ee4fa1a803538ccf89cf3ad"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="65fa0c76-2b8b-684d-5ccf-45d1793287f9" data-gramm="true" data-gramm_editor="true">
+<h1>Database Migrations</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="6d7a9c233ac5fd8cea0cc4405b433476"><div class="sl-block-content" style="z-index: 12; font-size: 120%;" data-highlight-theme="obsidian"><pre class="ruby"><code>module CreateTableSearches
+
+using SearchLight
+
+function up()
+  SearchLight.query("CREATE SEQUENCE searches__seq_id")
+  SearchLight.query("
+    CREATE TABLE searches (
+      id INTEGER CONSTRAINT searches__idx_id PRIMARY KEY DEFAULT NEXTVAL('searches__seq_id'),
+      search VARCHAR(50) UNIQUE
+    )
+  ")
+  SearchLight.query("ALTER SEQUENCE searches__seq_id OWNED BY searches.id")
+  SearchLight.query("CREATE INDEX searches__idx_search ON searches (search)")
+end
+
+function down()
+  SearchLight.query("DROP TABLE searches")
+end
+
+end</code></pre></div></div></section><section data-id="fe934f5771f660d5659581ef29eea790"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 20px; height: auto;" data-block-id="98d8bc38b4d7e0d4befb1f03b2e08bd7"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Generators</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 145px;" data-block-id="f6162c54763286c24441acadd2783611"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%;">
+<p>App</p>
+
+<p>Model</p>
+
+<p>Controller</p>
+
+<p>Channel</p>
+
+<p>Resource</p>
+
+<p>Migration</p>
+
+<p>Task/Job</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="658beded27f2828c421df61defd1b579"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="a7a208dc674666eccb4184a53f218ca4"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 20px; height: auto;" data-block-id="88e9095469c144133032ecf9afcbc9d8"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>CLI</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 960px; height: 560px; left: 0px; top: 140px;" data-block-id="cddbbb8f3878285e51af2eb73b56225c"><div class="sl-block-content" style="z-index: 13; font-size: 150%;" data-highlight-theme="obsidian"><pre class="bash"><code>$&gt; bin/server -p 8002
+
+Listening on 0.0.0.0:8002...
+
+
+
+$&gt; bin/repl
+
+genie&gt; 
+
+
+
+$&gt; bin/repl -h
+
+# ... help output truncated ...</code></pre></div></div></section><section data-id="17506fb1c345a3e36c890b0d29319736"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 21px; height: auto;" data-block-id="1f30438020ee82347068bc79d25b7850"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;" data-gramm_id="3dcc1cf6-d632-7615-0321-3dcf4d8689ab" data-gramm="true" data-gramm_editor="true">
+<h1>And more...</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 145px;" data-block-id="128489e8cea1b428ba518671d15fc812"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 150%;" data-gramm_id="173bdfa2-7341-14cc-e0de-3e061c006944" data-gramm="true" data-gramm_editor="true">
+<p>Authentication</p>
+
+<p> Authorization</p>
+
+<p>Sessions</p>
+
+<p>Cookies</p>
+
+<p>Logging</p>
+
+<p>Database Seeding</p>
+
+<p><span>Encryption</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="width: 92px; height: 70px; left: 868px; top: 630px;" data-block-id="15fa5324ecc885c6ed1c8428660d792a"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div></section><section data-id="cc3961193d8f40e4af9a52f6b25a5761"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 323px; left: 264px; top: 20px;" data-block-id="cf904f46dce62ee906815a4623a2bf1f"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="500" data-natural-height="448" data-lazy-loaded="" data-src="f-2/063b197c6aeb14a3baf2b18448a29c3a.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 360px; height: 274px; left: 336px; top: 250px;" data-block-id="6ad02c45e9f837473c5f10d92ccebe8d"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="788" data-natural-height="600" data-lazy-loaded="" data-src="f-2/ff5a91eb95191fc29a7948f2aa3321a6.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 565px;" data-block-id="3ebcc5973f9441bb489d5685e3a45a86"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0); font-size: 120%;" data-gramm_id="f95b0414-44b8-30ab-95bf-0fdcf6bd1ad2" data-gramm="true" data-gramm_editor="true">
+<h3>genieframework.com</h3>
+</div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1030695,"slug":"f-2","title":"Full stack web dev with Genie.jl","description":"","width":960,"height":700,"visibility":"self","published_at":null,"sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/b0932e935584cd9ead63a6cc895c7d84/thumb.jpg?184261477","view_count":0,"user":{"id":722184,"username":"adriansalceanu","name":"Adrian Salceanu","description":null,"thumbnail_url":"https://lh6.googleusercontent.com/-ahrr7vSke5s/AAAAAAAAAAI/AAAAAAAAPsM/C9ZsYE9o00k/photo.jpg?sz=50","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":572045,"present_controls":true,"present_upsizing":true,"present_pointer":true,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"should_loop":false,"share_notes":null,"slide_number":null,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1498227778032,"font_typekit":null,"font_google":null,"notes":{"f67a97ac682d95d09347f263b852f1da":"Used for long-running operations, started manually or by other programs on the server (cron).\n\nNot accessible through the web server.","eaf2e2be037422495092c3cf3028f2a6":"FileSystem backend. SearchLight and Redis next. "}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
